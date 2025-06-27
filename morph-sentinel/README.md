@@ -10,10 +10,32 @@ npm install -g .
 
 ## Usage
 
-To analyze a Solidity file, simply run:
+To analyze a Solidity file from the command line, simply run:
 
 ```bash
 ./src/index.js path/to/YourContract.sol
+```
+
+## Usage as a Library (SDK)
+
+In addition to the CLI, you can use `Morph Sentinel` programmatically as a library in your own projects. This makes it easy to integrate our security analysis into your existing development workflows.
+
+First, install it as a local dependency:
+```bash
+npm install /path/to/morph-sentinel
+```
+
+Then, you can use the `lint` function in your code:
+
+```javascript
+const { lint } = require('morph-sentinel');
+const fs = require('fs');
+
+const sourceCode = fs.readFileSync('path/to/YourContract.sol', 'utf8');
+const issues = lint(sourceCode);
+
+// issues is an array of issue objects
+console.log(issues);
 ```
 
 ## Implemented Security Rules
