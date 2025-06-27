@@ -1,0 +1,25 @@
+{
+  "name": "morph-sentinel",
+  "version": "0.1.0",
+  "description": "An AI-powered security linter for Morph smart contracts.",
+  "main": "src/index.js",
+  "bin": {
+    "morph-sentinel": "./src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "morph",
+    "blockchain",
+    "security",
+    "linter",
+    "solidity"
+  ],
+  "author": "Joseph Ochiagha",
+  "license": "MIT",
+  "dependencies": {
+    "@solidity-parser/parser": "^0.14.2",
+    "yargs": "^17.7.2"
+  }
+}
